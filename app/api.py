@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 import uuid
 from collections import Counter, deque
@@ -41,7 +42,9 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Cred Domain Support Agent", version="1.0.0",
               description="LangGraph banking support agent: RAG + loan lookup + guardrails.",
               lifespan=lifespan)
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"]
+                   + [o for o in os.environ.get("CORS_ORIGINS", "").split(",") if o],
+                   allow_origin_regex=r"https://[a-z0-9-]+\.onrender\.com",
                    allow_methods=["*"], allow_headers=["*"])
 
 
