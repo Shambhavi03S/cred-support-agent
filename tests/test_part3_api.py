@@ -46,7 +46,7 @@ def test_add_document_then_retrievable(client):
     try:
         assert r.status_code == 200 and r.json()["chunks_indexed"]
         res = client.get("/knowledge/search", params={"q": "How much can I borrow against gold?"}).json()
-        assert any(h["doc_id"] == "zz_test_doc" for h in res["results"])
+        assert any(h["doc_id"] == "zz_test_doc" for h in res["results"]), res
     finally:
         (config.KB_DIR / "zz_test_doc.md").unlink(missing_ok=True)
 

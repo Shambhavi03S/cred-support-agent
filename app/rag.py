@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+
+import numpy as np
 from pathlib import Path
 
 from . import config
@@ -141,12 +143,18 @@ def retrieve(query: str, collection: str | None = None, k: int = config.TOP_K) -
     """Top-k chunks by cosine similarity (similarity = 1 - cosine distance)."""
     ensure_index()
     col = get_client().get_collection(collection or config.AGENT_COLLECTION)
-    res = col.query(query_embeddings=embed([query]), n_results=min(k, col.count()),
-                    include=["documents", "metadatas", "distances"])
+    # The KB is tiny, so rank by EXACT cosine similarity instead of Chroma's approximate HNSW
+    # search (which intermittently missed a chunk added moments earlier). Embeddings are
+    # L2-normalised, so dot product == cosine similarity.
+    data = col.get(include=["embeddings", "documents", "metadatas"])
+    q = np.asarray(embed([query])[0], dtype=np.float32)
+    sims = np.asarray(data["embeddings"], dtype=np.float32) @ q
+    order = np.argsort(-sims, kind="stable")[:k]
     out = []
-    for doc, meta, dist in zip(res["documents"][0], res["metadatas"][0], res["distances"][0]):
+    for i in order:
+        meta = data["metadatas"][i]
         out.append({"doc_id": meta["doc_id"], "title": meta["title"],
-                    "text": meta.get("raw", doc), "similarity": round(1.0 - dist, 4),
+                    "text": meta.get("raw", data["documents"][i]), "similarity": round(float(sims[i]), 4),
                     "chunk_index": meta["chunk_index"]})
     return out
 
