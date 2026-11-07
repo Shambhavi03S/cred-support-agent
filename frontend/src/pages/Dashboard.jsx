@@ -3,7 +3,7 @@ import { Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer,
 import { useGet } from '../hooks'
 import { Panel, Stat, State } from '../components'
 
-const COLORS = ['#0b2545', '#1d6fb8', '#5fa8d3', '#9db4c0', '#c8553d']
+const COLORS = ['#7c5cff', '#00e5ff', '#2ee59d', '#ffb547', '#ff5d7a']
 
 export default function Dashboard() {
   const s = useGet('/stats')
@@ -45,7 +45,7 @@ export default function Dashboard() {
                 <BarChart data={cat}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" fontSize={11} /><YAxis allowDecimals={false} /><Tooltip />
-                  <Bar dataKey="value" fill="#1d6fb8" />
+                  <Bar dataKey="value" fill="#00e5ff" radius={[8, 8, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </Panel>

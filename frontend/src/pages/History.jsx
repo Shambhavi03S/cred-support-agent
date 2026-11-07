@@ -29,7 +29,7 @@ export default function History() {
         <Panel title={sel ? `Conversation ${sel}` : 'Select a conversation'}>
           {msgs.map((m, i) => (
             <Box key={i} sx={{ display: 'flex', justifyContent: m.role === 'user' ? 'flex-end' : 'flex-start', mb: 1 }}>
-              <Paper variant="outlined" sx={{ p: 1.2, maxWidth: '80%', bgcolor: m.role === 'user' ? '#0b2545' : '#fff', color: m.role === 'user' ? '#fff' : 'inherit' }}>
+              <Paper variant="outlined" sx={{ p: 1.2, maxWidth: '80%', background: m.role === 'user' ? 'linear-gradient(135deg,#7c5cff,#4b8bff)' : 'rgba(255,255,255,0.08)', color: '#fff' }}>
                 <Typography variant="body2">{m.content}</Typography>
                 <Typography variant="caption" sx={{ opacity: 0.7 }}>{new Date(m.ts * 1000).toLocaleString()}</Typography>
               </Paper>

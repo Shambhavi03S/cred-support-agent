@@ -42,16 +42,28 @@ export default function App() {
   const wide = useMediaQuery('(min-width:900px)')
   const Page = NAV[idx][2]
   const drawer = (
-    <Box sx={{ bgcolor: '#0b2545', color: '#fff', height: '100%' }}>
-      <Toolbar sx={{ py: 2 }}>
-        <Typography variant="subtitle1" sx={{ fontWeight: 700, letterSpacing: 0.5, lineHeight: 1.25 }}>
-          CRED DOMAIN<br />SUPPORT AGENT
-        </Typography>
+    <Box sx={{ background: 'linear-gradient(180deg,#120a3a 0%,#0a1233 60%,#06101f 100%)', color: '#fff', height: '100%', borderRight: '1px solid rgba(124,92,255,0.3)' }}>
+      <Toolbar sx={{ py: 2, gap: 1.5 }}>
+        <Box sx={{ width: 40, height: 40, borderRadius: '12px', display: 'grid', placeItems: 'center', animation: 'glow 3s ease-in-out infinite',
+          background: 'linear-gradient(135deg,#7c5cff,#00e5ff)' }}><SmartToyIcon /></Box>
+        <Box>
+          <Typography variant="subtitle1" sx={{ fontWeight: 800, letterSpacing: 0.5, lineHeight: 1.2,
+            background: 'linear-gradient(90deg,#fff,#00e5ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            CRED AGENT
+          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8 }}>
+            <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#2ee59d', animation: 'pulse 1.8s infinite' }} />
+            <Typography variant="caption" sx={{ color: '#9fb0d9' }}>Agent online</Typography>
+          </Box>
+        </Box>
       </Toolbar>
-      <List>
+      <List sx={{ px: 1 }}>
         {NAV.map(([label, Icon], i) => (
           <ListItemButton key={label} selected={i === idx} onClick={() => { setIdx(i); setOpen(false) }}
-            sx={{ color: '#c9d6e8', '&.Mui-selected': { bgcolor: '#173a6a', color: '#fff' }, '&:hover': { bgcolor: '#14335c' } }}>
+            sx={{ color: '#b7c4e6', borderRadius: '12px', mb: 0.5, transition: 'all .2s',
+              '&.Mui-selected': { background: 'linear-gradient(90deg,rgba(124,92,255,0.55),rgba(0,229,255,0.2))', color: '#fff', boxShadow: '0 0 16px rgba(124,92,255,0.45)' },
+              '&.Mui-selected:hover': { background: 'linear-gradient(90deg,rgba(124,92,255,0.65),rgba(0,229,255,0.3))' },
+              '&:hover': { bgcolor: 'rgba(124,92,255,0.18)', transform: 'translateX(4px)' } }}>
             <ListItemIcon sx={{ color: 'inherit', minWidth: 38 }}><Icon fontSize="small" /></ListItemIcon>
             <ListItemText primary={label} primaryTypographyProps={{ fontSize: 14 }} />
           </ListItemButton>
@@ -74,8 +86,8 @@ export default function App() {
         {drawer}
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: { xs: 2, md: 3 }, pt: { xs: 9, md: 3 }, minWidth: 0 }}>
-        {wide && <Typography variant="h5" sx={{ mb: 2, color: 'primary.main' }}>{NAV[idx][0]}</Typography>}
-        <Page />
+        {wide && <Typography variant="h5" sx={{ mb: 2, background: 'linear-gradient(90deg,#fff,#00e5ff,#7c5cff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{NAV[idx][0]}</Typography>}
+        <Box key={idx} sx={{ animation: 'fadeUp .45s ease both' }}><Page /></Box>
       </Box>
     </Box>
   )

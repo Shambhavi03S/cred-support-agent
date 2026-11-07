@@ -24,7 +24,7 @@ export default function RagAnalytics() {
           <Panel title="Chunking strategies — Precision@3 / Recall@3 (document level)">
             <ResponsiveContainer width="100%" height={280}>
               <BarChart data={chunk}><CartesianGrid strokeDasharray="3 3" /><XAxis dataKey="name" fontSize={11} /><YAxis domain={[0, 1]} /><Tooltip /><Legend />
-                <Bar dataKey="Precision@3" fill="#0b2545" /><Bar dataKey="Recall@3" fill="#5fa8d3" /></BarChart>
+                <Bar dataKey="Precision@3" fill="#7c5cff" radius={[6, 6, 0, 0]} /><Bar dataKey="Recall@3" fill="#00e5ff" radius={[6, 6, 0, 0]} /></BarChart>
             </ResponsiveContainer>
           </Panel>
         )}
