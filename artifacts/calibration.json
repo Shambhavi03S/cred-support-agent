@@ -1,0 +1,52 @@
+{
+  "kb_fixed_overlap": {
+    "threshold": 0.3952,
+    "min_in_scope": 0.6311,
+    "max_out_of_scope": 0.1593,
+    "clusters_separated": true,
+    "in_scope": {
+      "What is the minimum monthly income needed for a personal loan?": 0.6723,
+      "How is the EMI calculated on a reducing balance loan?": 0.7175,
+      "What is the late payment fee on the credit card?": 0.7528,
+      "Which documents are required for KYC verification?": 0.7921,
+      "How do I dispute an unauthorised card transaction?": 0.6311,
+      "What is the process to close my savings account?": 0.798,
+      "What interest rate will I get on a home loan?": 0.757,
+      "Is there a penalty for prepaying a fixed-rate loan?": 0.7571,
+      "What factors lower my credit score?": 0.7055,
+      "Who can sign in a jointly operated account?": 0.7061
+    },
+    "out_of_scope": {
+      "Who won the cricket world cup final?": 0.1447,
+      "What is the best recipe for chicken biryani?": 0.0604,
+      "How do I reset my Netflix password?": 0.1593,
+      "Explain quantum entanglement in simple words.": 0.0907,
+      "What is the capital of France?": 0.1063
+    }
+  },
+  "kb_sentence": {
+    "threshold": 0.3912,
+    "min_in_scope": 0.6189,
+    "max_out_of_scope": 0.1636,
+    "clusters_separated": true,
+    "in_scope": {
+      "What is the minimum monthly income needed for a personal loan?": 0.678,
+      "How is the EMI calculated on a reducing balance loan?": 0.7601,
+      "What is the late payment fee on the credit card?": 0.767,
+      "Which documents are required for KYC verification?": 0.7941,
+      "How do I dispute an unauthorised card transaction?": 0.6189,
+      "What is the process to close my savings account?": 0.8057,
+      "What interest rate will I get on a home loan?": 0.7539,
+      "Is there a penalty for prepaying a fixed-rate loan?": 0.74,
+      "What factors lower my credit score?": 0.7088,
+      "Who can sign in a jointly operated account?": 0.7007
+    },
+    "out_of_scope": {
+      "Who won the cricket world cup final?": 0.1464,
+      "What is the best recipe for chicken biryani?": 0.054,
+      "How do I reset my Netflix password?": 0.1636,
+      "Explain quantum entanglement in simple words.": 0.0863,
+      "What is the capital of France?": 0.0544
+    }
+  }
+}

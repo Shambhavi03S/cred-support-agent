@@ -1,0 +1,530 @@
+{
+  "A_single_gold/kb_fixed_overlap": {
+    "mean_precision@3": 0.3333,
+    "mean_recall@3": 1.0,
+    "mean_top1_similarity": 0.7289,
+    "per_query": [
+      {
+        "query": "What is the minimum monthly income needed for a personal loan?",
+        "gold": [
+          "kb01_loan_eligibility"
+        ],
+        "retrieved_docs": [
+          "kb01_loan_eligibility",
+          "kb07_interest_rate_slabs",
+          "kb09_minimum_balance"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6723
+      },
+      {
+        "query": "How is the EMI calculated on a reducing balance loan?",
+        "gold": [
+          "kb02_emi_calculation"
+        ],
+        "retrieved_docs": [
+          "kb02_emi_calculation",
+          "kb08_prepayment_penalty",
+          "kb15_grievance_late_payment"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7175
+      },
+      {
+        "query": "What is the late payment fee on the credit card?",
+        "gold": [
+          "kb03_credit_card_fees"
+        ],
+        "retrieved_docs": [
+          "kb03_credit_card_fees",
+          "kb15_grievance_late_payment",
+          "kb06_account_closure"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7528
+      },
+      {
+        "query": "Which documents are required for KYC verification?",
+        "gold": [
+          "kb04_kyc_documents"
+        ],
+        "retrieved_docs": [
+          "kb04_kyc_documents",
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7921
+      },
+      {
+        "query": "How do I dispute an unauthorised card transaction?",
+        "gold": [
+          "kb05_fraud_dispute"
+        ],
+        "retrieved_docs": [
+          "kb05_fraud_dispute",
+          "kb15_grievance_late_payment",
+          "kb03_credit_card_fees"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6311
+      },
+      {
+        "query": "What is the process to close my savings account?",
+        "gold": [
+          "kb06_account_closure"
+        ],
+        "retrieved_docs": [
+          "kb06_account_closure",
+          "kb11_joint_account_rules",
+          "kb09_minimum_balance"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.798
+      },
+      {
+        "query": "What interest rate will I get on a home loan?",
+        "gold": [
+          "kb07_interest_rate_slabs"
+        ],
+        "retrieved_docs": [
+          "kb07_interest_rate_slabs",
+          "kb01_loan_eligibility",
+          "kb08_prepayment_penalty"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.757
+      },
+      {
+        "query": "Is there a penalty for prepaying a fixed-rate loan?",
+        "gold": [
+          "kb08_prepayment_penalty"
+        ],
+        "retrieved_docs": [
+          "kb08_prepayment_penalty",
+          "kb13_application_statuses",
+          "kb07_interest_rate_slabs"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7571
+      },
+      {
+        "query": "What factors lower my credit score?",
+        "gold": [
+          "kb10_credit_score_impact"
+        ],
+        "retrieved_docs": [
+          "kb10_credit_score_impact",
+          "kb07_interest_rate_slabs",
+          "kb01_loan_eligibility"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7055
+      },
+      {
+        "query": "Who can sign in a jointly operated account?",
+        "gold": [
+          "kb11_joint_account_rules"
+        ],
+        "retrieved_docs": [
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility",
+          "kb06_account_closure"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7061
+      }
+    ],
+    "n_chunks": 34
+  },
+  "A_single_gold/kb_sentence": {
+    "mean_precision@3": 0.3333,
+    "mean_recall@3": 1.0,
+    "mean_top1_similarity": 0.7327,
+    "per_query": [
+      {
+        "query": "What is the minimum monthly income needed for a personal loan?",
+        "gold": [
+          "kb01_loan_eligibility"
+        ],
+        "retrieved_docs": [
+          "kb01_loan_eligibility",
+          "kb07_interest_rate_slabs",
+          "kb09_minimum_balance"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.678
+      },
+      {
+        "query": "How is the EMI calculated on a reducing balance loan?",
+        "gold": [
+          "kb02_emi_calculation"
+        ],
+        "retrieved_docs": [
+          "kb02_emi_calculation",
+          "kb15_grievance_late_payment",
+          "kb13_application_statuses"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7601
+      },
+      {
+        "query": "What is the late payment fee on the credit card?",
+        "gold": [
+          "kb03_credit_card_fees"
+        ],
+        "retrieved_docs": [
+          "kb03_credit_card_fees",
+          "kb15_grievance_late_payment",
+          "kb10_credit_score_impact"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.767
+      },
+      {
+        "query": "Which documents are required for KYC verification?",
+        "gold": [
+          "kb04_kyc_documents"
+        ],
+        "retrieved_docs": [
+          "kb04_kyc_documents",
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7941
+      },
+      {
+        "query": "How do I dispute an unauthorised card transaction?",
+        "gold": [
+          "kb05_fraud_dispute"
+        ],
+        "retrieved_docs": [
+          "kb05_fraud_dispute",
+          "kb14_escalation_policy",
+          "kb03_credit_card_fees"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6189
+      },
+      {
+        "query": "What is the process to close my savings account?",
+        "gold": [
+          "kb06_account_closure"
+        ],
+        "retrieved_docs": [
+          "kb06_account_closure",
+          "kb11_joint_account_rules",
+          "kb09_minimum_balance"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.8057
+      },
+      {
+        "query": "What interest rate will I get on a home loan?",
+        "gold": [
+          "kb07_interest_rate_slabs"
+        ],
+        "retrieved_docs": [
+          "kb07_interest_rate_slabs",
+          "kb01_loan_eligibility",
+          "kb08_prepayment_penalty"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7539
+      },
+      {
+        "query": "Is there a penalty for prepaying a fixed-rate loan?",
+        "gold": [
+          "kb08_prepayment_penalty"
+        ],
+        "retrieved_docs": [
+          "kb08_prepayment_penalty",
+          "kb13_application_statuses",
+          "kb07_interest_rate_slabs"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.74
+      },
+      {
+        "query": "What factors lower my credit score?",
+        "gold": [
+          "kb10_credit_score_impact"
+        ],
+        "retrieved_docs": [
+          "kb10_credit_score_impact",
+          "kb07_interest_rate_slabs",
+          "kb01_loan_eligibility"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7088
+      },
+      {
+        "query": "Who can sign in a jointly operated account?",
+        "gold": [
+          "kb11_joint_account_rules"
+        ],
+        "retrieved_docs": [
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility",
+          "kb06_account_closure"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 1.0,
+        "top1_similarity": 0.7007
+      }
+    ],
+    "n_chunks": 31
+  },
+  "B_multi_gold/kb_fixed_overlap": {
+    "mean_precision@3": 0.7222,
+    "mean_recall@3": 0.9167,
+    "mean_top1_similarity": 0.596,
+    "per_query": [
+      {
+        "query": "What happens if I miss a payment on my loan or credit card?",
+        "gold": [
+          "kb03_credit_card_fees",
+          "kb15_grievance_late_payment",
+          "kb10_credit_score_impact"
+        ],
+        "retrieved_docs": [
+          "kb10_credit_score_impact",
+          "kb15_grievance_late_payment",
+          "kb03_credit_card_fees"
+        ],
+        "hits": 3,
+        "precision@3": 1.0,
+        "recall@3": 1.0,
+        "top1_similarity": 0.4322
+      },
+      {
+        "query": "What documents and income do I need to apply for a home loan?",
+        "gold": [
+          "kb01_loan_eligibility",
+          "kb04_kyc_documents"
+        ],
+        "retrieved_docs": [
+          "kb01_loan_eligibility",
+          "kb04_kyc_documents",
+          "kb07_interest_rate_slabs"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6084
+      },
+      {
+        "query": "What fees or penalties can be charged on a loan?",
+        "gold": [
+          "kb08_prepayment_penalty",
+          "kb15_grievance_late_payment"
+        ],
+        "retrieved_docs": [
+          "kb08_prepayment_penalty",
+          "kb03_credit_card_fees",
+          "kb07_interest_rate_slabs"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 0.5,
+        "top1_similarity": 0.5891
+      },
+      {
+        "query": "How does a fraud flag affect my loan application?",
+        "gold": [
+          "kb05_fraud_dispute",
+          "kb14_escalation_policy"
+        ],
+        "retrieved_docs": [
+          "kb05_fraud_dispute",
+          "kb13_application_statuses",
+          "kb14_escalation_policy"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6719
+      },
+      {
+        "query": "Can an NRI open a joint account and what KYC is needed?",
+        "gold": [
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility",
+          "kb04_kyc_documents"
+        ],
+        "retrieved_docs": [
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility",
+          "kb04_kyc_documents"
+        ],
+        "hits": 3,
+        "precision@3": 1.0,
+        "recall@3": 1.0,
+        "top1_similarity": 0.628
+      },
+      {
+        "query": "Which savings accounts need a minimum balance and how do I close one?",
+        "gold": [
+          "kb09_minimum_balance",
+          "kb06_account_closure"
+        ],
+        "retrieved_docs": [
+          "kb06_account_closure",
+          "kb09_minimum_balance",
+          "kb11_joint_account_rules"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6466
+      }
+    ],
+    "n_chunks": 34
+  },
+  "B_multi_gold/kb_sentence": {
+    "mean_precision@3": 0.6667,
+    "mean_recall@3": 0.8611,
+    "mean_top1_similarity": 0.573,
+    "per_query": [
+      {
+        "query": "What happens if I miss a payment on my loan or credit card?",
+        "gold": [
+          "kb03_credit_card_fees",
+          "kb15_grievance_late_payment",
+          "kb10_credit_score_impact"
+        ],
+        "retrieved_docs": [
+          "kb03_credit_card_fees",
+          "kb10_credit_score_impact",
+          "kb13_application_statuses"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 0.6667,
+        "top1_similarity": 0.4611
+      },
+      {
+        "query": "What documents and income do I need to apply for a home loan?",
+        "gold": [
+          "kb01_loan_eligibility",
+          "kb04_kyc_documents"
+        ],
+        "retrieved_docs": [
+          "kb01_loan_eligibility",
+          "kb04_kyc_documents",
+          "kb07_interest_rate_slabs"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 1.0,
+        "top1_similarity": 0.5971
+      },
+      {
+        "query": "What fees or penalties can be charged on a loan?",
+        "gold": [
+          "kb08_prepayment_penalty",
+          "kb15_grievance_late_payment"
+        ],
+        "retrieved_docs": [
+          "kb08_prepayment_penalty",
+          "kb03_credit_card_fees",
+          "kb07_interest_rate_slabs"
+        ],
+        "hits": 1,
+        "precision@3": 0.3333,
+        "recall@3": 0.5,
+        "top1_similarity": 0.5734
+      },
+      {
+        "query": "How does a fraud flag affect my loan application?",
+        "gold": [
+          "kb05_fraud_dispute",
+          "kb14_escalation_policy"
+        ],
+        "retrieved_docs": [
+          "kb05_fraud_dispute",
+          "kb13_application_statuses",
+          "kb14_escalation_policy"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 1.0,
+        "top1_similarity": 0.5393
+      },
+      {
+        "query": "Can an NRI open a joint account and what KYC is needed?",
+        "gold": [
+          "kb11_joint_account_rules",
+          "kb12_nri_account_eligibility",
+          "kb04_kyc_documents"
+        ],
+        "retrieved_docs": [
+          "kb11_joint_account_rules",
+          "kb04_kyc_documents",
+          "kb12_nri_account_eligibility"
+        ],
+        "hits": 3,
+        "precision@3": 1.0,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6125
+      },
+      {
+        "query": "Which savings accounts need a minimum balance and how do I close one?",
+        "gold": [
+          "kb09_minimum_balance",
+          "kb06_account_closure"
+        ],
+        "retrieved_docs": [
+          "kb09_minimum_balance",
+          "kb06_account_closure",
+          "kb11_joint_account_rules"
+        ],
+        "hits": 2,
+        "precision@3": 0.6667,
+        "recall@3": 1.0,
+        "top1_similarity": 0.6547
+      }
+    ],
+    "n_chunks": 31
+  }
+}

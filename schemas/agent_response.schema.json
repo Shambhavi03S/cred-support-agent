@@ -1,0 +1,201 @@
+{
+  "$defs": {
+    "Guardrails": {
+      "properties": {
+        "pii_masked": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Pii Masked",
+          "type": "array"
+        },
+        "injection_detected": {
+          "default": false,
+          "title": "Injection Detected",
+          "type": "boolean"
+        },
+        "grounded": {
+          "default": true,
+          "title": "Grounded",
+          "type": "boolean"
+        },
+        "fallback_triggered": {
+          "default": false,
+          "title": "Fallback Triggered",
+          "type": "boolean"
+        }
+      },
+      "title": "Guardrails",
+      "type": "object"
+    },
+    "LoanInfo": {
+      "properties": {
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "status": {
+          "title": "Status",
+          "type": "string"
+        },
+        "loan_amount_inr": {
+          "title": "Loan Amount Inr",
+          "type": "integer"
+        },
+        "days_since_created": {
+          "title": "Days Since Created",
+          "type": "integer"
+        },
+        "flagged_for_fraud_review": {
+          "title": "Flagged For Fraud Review",
+          "type": "boolean"
+        },
+        "escalation_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Escalation Score",
+          "type": "number"
+        },
+        "escalate": {
+          "title": "Escalate",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "record_id",
+        "category",
+        "status",
+        "loan_amount_inr",
+        "days_since_created",
+        "flagged_for_fraud_review",
+        "escalation_score",
+        "escalate"
+      ],
+      "title": "LoanInfo",
+      "type": "object"
+    },
+    "SourceRef": {
+      "properties": {
+        "doc_id": {
+          "title": "Doc Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "similarity": {
+          "maximum": 1.0,
+          "minimum": -1.0,
+          "title": "Similarity",
+          "type": "number"
+        },
+        "snippet": {
+          "title": "Snippet",
+          "type": "string"
+        }
+      },
+      "required": [
+        "doc_id",
+        "title",
+        "similarity",
+        "snippet"
+      ],
+      "title": "SourceRef",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "conversation_id": {
+      "title": "Conversation Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    },
+    "intent": {
+      "enum": [
+        "policy_question",
+        "loan_status",
+        "clarification",
+        "blocked",
+        "unknown"
+      ],
+      "title": "Intent",
+      "type": "string"
+    },
+    "route": {
+      "enum": [
+        "rag",
+        "loan_tool",
+        "clarify",
+        "blocked"
+      ],
+      "title": "Route",
+      "type": "string"
+    },
+    "answer": {
+      "minLength": 1,
+      "title": "Answer",
+      "type": "string"
+    },
+    "sources": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/SourceRef"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "loan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/LoanInfo"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "guardrails": {
+      "$ref": "#/$defs/Guardrails"
+    },
+    "model": {
+      "title": "Model",
+      "type": "string"
+    },
+    "nodes_executed": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Nodes Executed",
+      "type": "array"
+    }
+  },
+  "required": [
+    "conversation_id",
+    "intent",
+    "route",
+    "answer",
+    "guardrails",
+    "model"
+  ],
+  "title": "AgentResponse",
+  "type": "object"
+}

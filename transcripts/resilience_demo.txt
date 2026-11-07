@@ -1,0 +1,16 @@
+﻿RetryPolicy: max_attempts=4 initial_interval=0.2s backoff_factor=2.0 max_interval=1.0s jitter=True
+
+(a) RETRY: node fails its first 2 calls, then succeeds
+   attempt 1 at t=0.01s
+   attempt 2 at t=0.95s
+   attempt 3 at t=1.43s
+   -> succeeded on attempt 3 | total calls: 3
+
+(b) PER-NODE TIMEOUT: node sleeps 3s, limit 0.5s
+   -> clean NodeTimeoutError after 0.52s: node 'slow_body' exceeded 0.5s
+
+(c) GLOBAL TIMEOUT: graph needs ~10s, global limit 1.0s
+   -> GlobalTimeoutError after 1.01s: graph run cancelled after global timeout of 1.0s
+   -> running node was cancelled: True
+
+PASS: retry recovered, per-node timeout fired cleanly, global timeout cancelled the run.

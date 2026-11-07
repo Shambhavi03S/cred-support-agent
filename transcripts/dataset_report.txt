@@ -1,0 +1,15 @@
+﻿Records generated      : 60 (seed=7)
+Count per category     :
+   Personal Loan   19
+   Home Loan       7
+   Auto Loan       10
+   Education Loan  8
+   Business Loan   16
+Count per status       :
+   Submitted       15
+   Under Review    10
+   Approved        15
+   Rejected        7
+   Disbursed       13
+Fraud-review flagged % : 18.33  (required band 10-30)
+Validation             : PASS

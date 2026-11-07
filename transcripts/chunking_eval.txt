@@ -1,0 +1,153 @@
+﻿
+################ SET A_single_gold (10 queries) ################
+
+=== A_single_gold / kb_fixed_overlap ===
+python.exe : 
+At F:\IIT_CAPSTONE\run_all_demos.ps1:14 char:3
++   & $py $j[0] 2>&1 | Where-Object { $_ -notmatch "Loading weights|HF_ ...
++   ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Q: What is the minimum monthly income needed for a personal loan?
+   gold=['kb01_loan_eligibility']
+   top-3 unique docs=['kb01_loan_eligibility', 'kb07_interest_rate_slabs', 'kb09_minimum_balance']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.6723
+Q: How is the EMI calculated on a reducing balance loan?
+   gold=['kb02_emi_calculation']
+   top-3 unique docs=['kb02_emi_calculation', 'kb08_prepayment_penalty', 'kb15_grievance_late_payment']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7175
+Q: What is the late payment fee on the credit card?
+   gold=['kb03_credit_card_fees']
+   top-3 unique docs=['kb03_credit_card_fees', 'kb15_grievance_late_payment', 'kb06_account_closure']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7528
+Q: Which documents are required for KYC verification?
+   gold=['kb04_kyc_documents']
+   top-3 unique docs=['kb04_kyc_documents', 'kb11_joint_account_rules', 'kb12_nri_account_eligibility']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7921
+Q: How do I dispute an unauthorised card transaction?
+   gold=['kb05_fraud_dispute']
+   top-3 unique docs=['kb05_fraud_dispute', 'kb15_grievance_late_payment', 'kb03_credit_card_fees']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.6311
+Q: What is the process to close my savings account?
+   gold=['kb06_account_closure']
+   top-3 unique docs=['kb06_account_closure', 'kb11_joint_account_rules', 'kb09_minimum_balance']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7980
+Q: What interest rate will I get on a home loan?
+   gold=['kb07_interest_rate_slabs']
+   top-3 unique docs=['kb07_interest_rate_slabs', 'kb01_loan_eligibility', 'kb08_prepayment_penalty']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7570
+Q: Is there a penalty for prepaying a fixed-rate loan?
+   gold=['kb08_prepayment_penalty']
+   top-3 unique docs=['kb08_prepayment_penalty', 'kb13_application_statuses', 'kb07_interest_rate_slabs']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7571
+Q: What factors lower my credit score?
+   gold=['kb10_credit_score_impact']
+   top-3 unique docs=['kb10_credit_score_impact', 'kb07_interest_rate_slabs', 'kb01_loan_eligibility']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7055
+Q: Who can sign in a jointly operated account?
+   gold=['kb11_joint_account_rules']
+   top-3 unique docs=['kb11_joint_account_rules', 'kb12_nri_account_eligibility', 'kb06_account_closure']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7061
+MEAN over 10: P@3 = 0.3333   R@3 = 1.0000   mean top-1 sim = 0.7289
+
+=== A_single_gold / kb_sentence ===
+Q: What is the minimum monthly income needed for a personal loan?
+   gold=['kb01_loan_eligibility']
+   top-3 unique docs=['kb01_loan_eligibility', 'kb07_interest_rate_slabs', 'kb09_minimum_balance']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.6780
+Q: How is the EMI calculated on a reducing balance loan?
+   gold=['kb02_emi_calculation']
+   top-3 unique docs=['kb02_emi_calculation', 'kb15_grievance_late_payment', 'kb13_application_statuses']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7601
+Q: What is the late payment fee on the credit card?
+   gold=['kb03_credit_card_fees']
+   top-3 unique docs=['kb03_credit_card_fees', 'kb15_grievance_late_payment', 'kb10_credit_score_impact']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7670
+Q: Which documents are required for KYC verification?
+   gold=['kb04_kyc_documents']
+   top-3 unique docs=['kb04_kyc_documents', 'kb11_joint_account_rules', 'kb12_nri_account_eligibility']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7941
+Q: How do I dispute an unauthorised card transaction?
+   gold=['kb05_fraud_dispute']
+   top-3 unique docs=['kb05_fraud_dispute', 'kb14_escalation_policy', 'kb03_credit_card_fees']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.6189
+Q: What is the process to close my savings account?
+   gold=['kb06_account_closure']
+   top-3 unique docs=['kb06_account_closure', 'kb11_joint_account_rules', 'kb09_minimum_balance']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.8057
+Q: What interest rate will I get on a home loan?
+   gold=['kb07_interest_rate_slabs']
+   top-3 unique docs=['kb07_interest_rate_slabs', 'kb01_loan_eligibility', 'kb08_prepayment_penalty']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7539
+Q: Is there a penalty for prepaying a fixed-rate loan?
+   gold=['kb08_prepayment_penalty']
+   top-3 unique docs=['kb08_prepayment_penalty', 'kb13_application_statuses', 'kb07_interest_rate_slabs']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7400
+Q: What factors lower my credit score?
+   gold=['kb10_credit_score_impact']
+   top-3 unique docs=['kb10_credit_score_impact', 'kb07_interest_rate_slabs', 'kb01_loan_eligibility']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7088
+Q: Who can sign in a jointly operated account?
+   gold=['kb11_joint_account_rules']
+   top-3 unique docs=['kb11_joint_account_rules', 'kb12_nri_account_eligibility', 'kb06_account_closure']
+   P@3 = 1/3 = 0.333   R@3 = 1/1 = 1.000   top-1 sim = 0.7007
+MEAN over 10: P@3 = 0.3333   R@3 = 1.0000   mean top-1 sim = 0.7327
+
+################ SET B_multi_gold (6 queries) ################
+
+=== B_multi_gold / kb_fixed_overlap ===
+Q: What happens if I miss a payment on my loan or credit card?
+   gold=['kb03_credit_card_fees', 'kb15_grievance_late_payment', 'kb10_credit_score_impact']
+   top-3 unique docs=['kb10_credit_score_impact', 'kb15_grievance_late_payment', 'kb03_credit_card_fees']
+   P@3 = 3/3 = 1.000   R@3 = 3/3 = 1.000   top-1 sim = 0.4322
+Q: What documents and income do I need to apply for a home loan?
+   gold=['kb01_loan_eligibility', 'kb04_kyc_documents']
+   top-3 unique docs=['kb01_loan_eligibility', 'kb04_kyc_documents', 'kb07_interest_rate_slabs']
+   P@3 = 2/3 = 0.667   R@3 = 2/2 = 1.000   top-1 sim = 0.6084
+Q: What fees or penalties can be charged on a loan?
+   gold=['kb08_prepayment_penalty', 'kb15_grievance_late_payment']
+   top-3 unique docs=['kb08_prepayment_penalty', 'kb03_credit_card_fees', 'kb07_interest_rate_slabs']
+   P@3 = 1/3 = 0.333   R@3 = 1/2 = 0.500   top-1 sim = 0.5891
+Q: How does a fraud flag affect my loan application?
+   gold=['kb05_fraud_dispute', 'kb14_escalation_policy']
+   top-3 unique docs=['kb05_fraud_dispute', 'kb13_application_statuses', 'kb14_escalation_policy']
+   P@3 = 2/3 = 0.667   R@3 = 2/2 = 1.000   top-1 sim = 0.6719
+Q: Can an NRI open a joint account and what KYC is needed?
+   gold=['kb11_joint_account_rules', 'kb12_nri_account_eligibility', 'kb04_kyc_documents']
+   top-3 unique docs=['kb11_joint_account_rules', 'kb12_nri_account_eligibility', 'kb04_kyc_documents']
+   P@3 = 3/3 = 1.000   R@3 = 3/3 = 1.000   top-1 sim = 0.6280
+Q: Which savings accounts need a minimum balance and how do I close one?
+   gold=['kb09_minimum_balance', 'kb06_account_closure']
+   top-3 unique docs=['kb06_account_closure', 'kb09_minimum_balance', 'kb11_joint_account_rules']
+   P@3 = 2/3 = 0.667   R@3 = 2/2 = 1.000   top-1 sim = 0.6466
+MEAN over 6: P@3 = 0.7222   R@3 = 0.9167   mean top-1 sim = 0.5960
+
+=== B_multi_gold / kb_sentence ===
+Q: What happens if I miss a payment on my loan or credit card?
+   gold=['kb03_credit_card_fees', 'kb15_grievance_late_payment', 'kb10_credit_score_impact']
+   top-3 unique docs=['kb03_credit_card_fees', 'kb10_credit_score_impact', 'kb13_application_statuses']
+   P@3 = 2/3 = 0.667   R@3 = 2/3 = 0.667   top-1 sim = 0.4611
+Q: What documents and income do I need to apply for a home loan?
+   gold=['kb01_loan_eligibility', 'kb04_kyc_documents']
+   top-3 unique docs=['kb01_loan_eligibility', 'kb04_kyc_documents', 'kb07_interest_rate_slabs']
+   P@3 = 2/3 = 0.667   R@3 = 2/2 = 1.000   top-1 sim = 0.5971
+Q: What fees or penalties can be charged on a loan?
+   gold=['kb08_prepayment_penalty', 'kb15_grievance_late_payment']
+   top-3 unique docs=['kb08_prepayment_penalty', 'kb03_credit_card_fees', 'kb07_interest_rate_slabs']
+   P@3 = 1/3 = 0.333   R@3 = 1/2 = 0.500   top-1 sim = 0.5734
+Q: How does a fraud flag affect my loan application?
+   gold=['kb05_fraud_dispute', 'kb14_escalation_policy']
+   top-3 unique docs=['kb05_fraud_dispute', 'kb13_application_statuses', 'kb14_escalation_policy']
+   P@3 = 2/3 = 0.667   R@3 = 2/2 = 1.000   top-1 sim = 0.5393
+Q: Can an NRI open a joint account and what KYC is needed?
+   gold=['kb11_joint_account_rules', 'kb12_nri_account_eligibility', 'kb04_kyc_documents']
+   top-3 unique docs=['kb11_joint_account_rules', 'kb04_kyc_documents', 'kb12_nri_account_eligibility']
+   P@3 = 3/3 = 1.000   R@3 = 3/3 = 1.000   top-1 sim = 0.6125
+Q: Which savings accounts need a minimum balance and how do I close one?
+   gold=['kb09_minimum_balance', 'kb06_account_closure']
+   top-3 unique docs=['kb09_minimum_balance', 'kb06_account_closure', 'kb11_joint_account_rules']
+   P@3 = 2/3 = 0.667   R@3 = 2/2 = 1.000   top-1 sim = 0.6547
+MEAN over 6: P@3 = 0.6667   R@3 = 0.8611   mean top-1 sim = 0.5730
+
+Chunk counts: kb_fixed_overlap=34, kb_sentence=31

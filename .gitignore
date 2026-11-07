@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/
+logs/
+node_modules/
+frontend/dist/
+.pytest_cache/
+*.sqlite
+Problem_Statement_full.pdf
+docs/_install.log

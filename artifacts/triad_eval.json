@@ -1,0 +1,293 @@
+{
+  "collection": "kb_fixed_overlap",
+  "judge_prompt": "You are an impartial judge of a retrieval-augmented banking assistant.\nGiven QUESTION, CONTEXT (retrieved chunks) and ANSWER, score each from 0 to 1:\n1. context_relevance - are the retrieved chunks relevant to the QUESTION?\n2. groundedness      - is every claim in the ANSWER supported by the CONTEXT?\n3. answer_relevance  - does the ANSWER address the QUESTION?\nReturn JSON: {\"context_relevance\": x, \"groundedness\": y, \"answer_relevance\": z}",
+  "averages": {
+    "context_relevance": 0.7556,
+    "groundedness": 1.0,
+    "answer_relevance": 0.6378
+  },
+  "mismatches": [],
+  "rows": [
+    {
+      "n": 1,
+      "query": "Which loan types have income and age eligibility rules?",
+      "out_of_scope": false,
+      "gold": [
+        "kb01_loan_eligibility"
+      ],
+      "retrieved": [
+        "kb01_loan_eligibility",
+        "kb01_loan_eligibility",
+        "kb01_loan_eligibility"
+      ],
+      "answer": "Cred Personal Loans are open to salaried applicants aged 21 to 60 with a minimum monthly income of INR 25,000 and at least one year of work history. Auto Loans need a minimum income of INR 20,000 per month and finance up to 85 percent of the on-road price of the vehicle.",
+      "fallback": false,
+      "top1_similarity": 0.7192,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.5875
+    },
+    {
+      "n": 2,
+      "query": "How do I calculate my monthly EMI?",
+      "out_of_scope": false,
+      "gold": [
+        "kb02_emi_calculation"
+      ],
+      "retrieved": [
+        "kb02_emi_calculation",
+        "kb02_emi_calculation",
+        "kb02_emi_calculation"
+      ],
+      "answer": "The equated monthly instalment is computed with the reducing-balance formula EMI = P x r x (1+r)^n / ((1+r)^n - 1), where P is the principal, r is the monthly interest rate (annual rate divided by 12 and by 100) and n is the number of monthly instalments. For example, a loan of INR 5,00,000 at 12 percent per annum over 36 months has an EMI of about INR 16,607.",
+      "fallback": false,
+      "top1_similarity": 0.7343,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6504
+    },
+    {
+      "n": 3,
+      "query": "What fees does the credit card carry?",
+      "out_of_scope": false,
+      "gold": [
+        "kb03_credit_card_fees"
+      ],
+      "retrieved": [
+        "kb03_credit_card_fees",
+        "kb03_credit_card_fees",
+        "kb03_credit_card_fees"
+      ],
+      "answer": "The Cred Select credit card carries a joining fee of INR 999 and an annual fee of INR 999, which is waived when yearly spends cross INR 1,50,000. Foreign-currency transactions include a mark-up fee of 3.5 percent.",
+      "fallback": false,
+      "top1_similarity": 0.6996,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6339
+    },
+    {
+      "n": 4,
+      "query": "What KYC documents do I need to submit?",
+      "out_of_scope": false,
+      "gold": [
+        "kb04_kyc_documents"
+      ],
+      "retrieved": [
+        "kb04_kyc_documents",
+        "kb04_kyc_documents",
+        "kb11_joint_account_rules"
+      ],
+      "answer": "Salaried applicants also submit the last three salary slips and six months of bank statements, while business applicants add GST registration and income-tax returns. Identity can be proved with a PAN card together with an officially valid document such as Aadhaar, passport, voter ID or driving licence.",
+      "fallback": false,
+      "top1_similarity": 0.7128,
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.3739
+    },
+    {
+      "n": 5,
+      "query": "What happens after I report a fraudulent transaction?",
+      "out_of_scope": false,
+      "gold": [
+        "kb05_fraud_dispute"
+      ],
+      "retrieved": [
+        "kb05_fraud_dispute",
+        "kb05_fraud_dispute",
+        "kb05_fraud_dispute"
+      ],
+      "answer": "A customer who notices an unauthorised transaction should report it to Cred support or block the card in the app immediately, because reporting within three working days limits the customer liability to zero.",
+      "fallback": false,
+      "top1_similarity": 0.6,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.4644
+    },
+    {
+      "n": 6,
+      "query": "What do I need to do to close my account?",
+      "out_of_scope": false,
+      "gold": [
+        "kb06_account_closure"
+      ],
+      "retrieved": [
+        "kb06_account_closure",
+        "kb06_account_closure",
+        "kb11_joint_account_rules"
+      ],
+      "answer": "To close a savings account the customer submits a closure request through the app or a branch after clearing all dues and linked loans. The remaining balance is paid to another account of the customer by transfer or demand draft within seven working days.",
+      "fallback": false,
+      "top1_similarity": 0.6028,
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.5552
+    },
+    {
+      "n": 7,
+      "query": "What are the interest rate slabs for loans?",
+      "out_of_scope": false,
+      "gold": [
+        "kb07_interest_rate_slabs"
+      ],
+      "retrieved": [
+        "kb07_interest_rate_slabs",
+        "kb07_interest_rate_slabs",
+        "kb08_prepayment_penalty"
+      ],
+      "answer": "Interest rates depend on the loan type and the borrower credit score. Cred does not charge any prepayment or foreclosure penalty on floating-rate loans taken by individual borrowers.",
+      "fallback": false,
+      "top1_similarity": 0.7776,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.5084
+    },
+    {
+      "n": 8,
+      "query": "What is the prepayment penalty on my loan?",
+      "out_of_scope": false,
+      "gold": [
+        "kb08_prepayment_penalty"
+      ],
+      "retrieved": [
+        "kb08_prepayment_penalty",
+        "kb08_prepayment_penalty",
+        "kb13_application_statuses"
+      ],
+      "answer": "Cred does not charge any prepayment or foreclosure penalty on floating-rate loans taken by individual borrowers. Fixed-rate loans attract a penalty of 2 percent of the principal outstanding at the time of the prepayment.",
+      "fallback": false,
+      "top1_similarity": 0.7333,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6347
+    },
+    {
+      "n": 9,
+      "query": "What minimum balance must I maintain?",
+      "out_of_scope": false,
+      "gold": [
+        "kb09_minimum_balance"
+      ],
+      "retrieved": [
+        "kb09_minimum_balance",
+        "kb09_minimum_balance",
+        "kb03_credit_card_fees"
+      ],
+      "answer": "A Cred Regular savings account needs an average monthly balance of INR 5,000 in metro and urban branches and INR 2,000 in semi-urban and rural branches. The Premium account requires an average monthly balance of INR 50,000.",
+      "fallback": false,
+      "top1_similarity": 0.5854,
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.4277
+    },
+    {
+      "n": 10,
+      "query": "How does my payment history affect my credit score?",
+      "out_of_scope": false,
+      "gold": [
+        "kb10_credit_score_impact"
+      ],
+      "retrieved": [
+        "kb10_credit_score_impact",
+        "kb10_credit_score_impact",
+        "kb03_credit_card_fees"
+      ],
+      "answer": "Payment history is the most important factor in a credit score, so missed or late EMIs lower it quickly. A high credit-utilisation ratio, meaning more than 30 percent of the card limit in use, also pulls the score down.",
+      "fallback": false,
+      "top1_similarity": 0.6141,
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.605
+    },
+    {
+      "n": 11,
+      "query": "What are the rules for a joint account?",
+      "out_of_scope": false,
+      "gold": [
+        "kb11_joint_account_rules"
+      ],
+      "retrieved": [
+        "kb11_joint_account_rules",
+        "kb11_joint_account_rules",
+        "kb06_account_closure"
+      ],
+      "answer": "A joint account can be opened by two or more individuals, and the operating mode is chosen as either-or-survivor, former-or-survivor or jointly. In an either-or-survivor account any holder can transact alone, whereas in a jointly-operated account every holder must sign.",
+      "fallback": false,
+      "top1_similarity": 0.7356,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6393
+    },
+    {
+      "n": 12,
+      "query": "Can a non-resident Indian open an NRE account?",
+      "out_of_scope": false,
+      "gold": [
+        "kb12_nri_account_eligibility"
+      ],
+      "retrieved": [
+        "kb12_nri_account_eligibility",
+        "kb12_nri_account_eligibility",
+        "kb09_minimum_balance"
+      ],
+      "answer": "Non-Resident Indians and Persons of Indian Origin can open NRE, NRO and FCNR(B) accounts with Cred. An NRE account holds money remitted from abroad in foreign currency, which is converted to rupees, and its balance and interest are fully repatriable.",
+      "fallback": false,
+      "top1_similarity": 0.7331,
+      "context_relevance": 0.6667,
+      "groundedness": 1.0,
+      "answer_relevance": 0.7131
+    },
+    {
+      "n": 13,
+      "query": "When should a loan application be escalated to a senior officer?",
+      "out_of_scope": false,
+      "gold": [
+        "kb14_escalation_policy"
+      ],
+      "retrieved": [
+        "kb14_escalation_policy",
+        "kb13_application_statuses",
+        "kb13_application_statuses"
+      ],
+      "answer": "Support staff escalate a loan application to a senior officer when its escalation score is 0.70 or higher. A loan application moves through five statuses: Submitted, Under Review, Approved, Rejected and Disbursed.",
+      "fallback": false,
+      "top1_similarity": 0.663,
+      "context_relevance": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 0.774
+    },
+    {
+      "n": 14,
+      "query": "Who won the cricket world cup final?",
+      "out_of_scope": true,
+      "gold": [],
+      "retrieved": [
+        "kb04_kyc_documents",
+        "kb04_kyc_documents",
+        "kb11_joint_account_rules"
+      ],
+      "answer": "I don't know based on the information available to me. I couldn't find this in our knowledge base, so please contact Cred support.",
+      "fallback": true,
+      "top1_similarity": 0.1447,
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0
+    },
+    {
+      "n": 15,
+      "query": "Please tell me the weather forecast for Mumbai tomorrow.",
+      "out_of_scope": true,
+      "gold": [],
+      "retrieved": [
+        "kb02_emi_calculation",
+        "kb12_nri_account_eligibility",
+        "kb15_grievance_late_payment"
+      ],
+      "answer": "I don't know based on the information available to me. I couldn't find this in our knowledge base, so please contact Cred support.",
+      "fallback": true,
+      "top1_similarity": 0.1634,
+      "context_relevance": 0.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0
+    }
+  ]
+}

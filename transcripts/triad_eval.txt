@@ -1,0 +1,28 @@
+﻿collection=kb_fixed_overlap  threshold=0.3952  llm=MOCK_LLM
+
+ # ctx_rel  ground ans_rel  fallback query
+python.exe : 
+At F:\IIT_CAPSTONE\run_all_demos.ps1:14 char:3
++   & $py $j[0] 2>&1 | Where-Object { $_ -notmatch "Loading weights|HF_ ...
++   ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ 1   1.000   1.000   0.588  False    Which loan types have income and age eligibility rules?
+ 2   1.000   1.000   0.650  False    How do I calculate my monthly EMI?
+ 3   1.000   1.000   0.634  False    What fees does the credit card carry?
+ 4   0.667   1.000   0.374  False    What KYC documents do I need to submit?
+ 5   1.000   1.000   0.464  False    What happens after I report a fraudulent transaction?
+ 6   0.667   1.000   0.555  False    What do I need to do to close my account?
+ 7   1.000   1.000   0.508  False    What are the interest rate slabs for loans?
+ 8   1.000   1.000   0.635  False    What is the prepayment penalty on my loan?
+ 9   0.667   1.000   0.428  False    What minimum balance must I maintain?
+10   0.667   1.000   0.605  False    How does my payment history affect my credit score?
+11   1.000   1.000   0.639  False    What are the rules for a joint account?
+12   0.667   1.000   0.713  False    Can a non-resident Indian open an NRE account?
+13   1.000   1.000   0.774  False    When should a loan application be escalated to a senior officer?
+14   0.000   1.000   1.000  True     Who won the cricket world cup final?
+15   0.000   1.000   1.000  True     Please tell me the weather forecast for Mumbai tomorrow.
+
+AVERAGES over 15 queries: {'context_relevance': 0.7556, 'groundedness': 1.0, 'answer_relevance': 0.6378}
+fallback behaviour mismatches (fallback != expected): none

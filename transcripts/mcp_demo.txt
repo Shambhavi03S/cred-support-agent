@@ -1,0 +1,54 @@
+﻿MCP tools: ['check_loan_application_status']
+
+--- call_tool(record_id='LA-1001') isError=False
+structured: {
+  "found": true,
+  "record_id": "LA-1001",
+  "category": "Home Loan",
+  "status": "Submitted",
+  "loan_amount_inr": 10290000,
+  "days_since_created": 2,
+  "flagged_for_fraud_review": false,
+  "escalation_score": 0.0333,
+  "escalation_threshold": 0.7,
+  "escalate": false
+}
+
+--- call_tool(record_id='LA-1005') isError=False
+structured: {
+  "found": true,
+  "record_id": "LA-1005",
+  "category": "Auto Loan",
+  "status": "Rejected",
+  "loan_amount_inr": 525000,
+  "days_since_created": 18,
+  "flagged_for_fraud_review": false,
+  "escalation_score": 0.3,
+  "escalation_threshold": 0.7,
+  "escalate": false
+}
+
+--- call_tool(record_id='LA-1009') isError=False
+structured: {
+  "found": true,
+  "record_id": "LA-1009",
+  "category": "Personal Loan",
+  "status": "Approved",
+  "loan_amount_inr": 105000,
+  "days_since_created": 21,
+  "flagged_for_fraud_review": true,
+  "escalation_score": 0.85,
+  "escalation_threshold": 0.7,
+  "escalate": true
+}
+
+--- call_tool(record_id='LA-9999') isError=False
+structured: {
+  "found": false,
+  "record_id": "LA-9999",
+  "error": "No loan application found with record_id 'LA-9999'."
+}
+MCP server up at http://127.0.0.1:8001/mcp
+
+
+client exit code: 0

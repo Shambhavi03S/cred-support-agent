@@ -1,0 +1,44 @@
+﻿collection=kb_fixed_overlap  calibrated threshold=0.3952
+
+python.exe : 
+At F:\IIT_CAPSTONE\run_all_demos.ps1:14 char:3
++   & $py $j[0] 2>&1 | Where-Object { $_ -notmatch "Loading weights|HF_ ...
++   ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Q: What is the minimum monthly income needed for a personal loan?
+   top-1 similarity = 0.6723  (threshold 0.3952)  -> ANSWER
+   sources: ['kb01_loan_eligibility', 'kb07_interest_rate_slabs']
+   A: Cred Personal Loans are open to salaried applicants aged 21 to 60 with a minimum monthly income of INR 25,000 and at least one year of work history. Auto Loans need a minimum income of INR 20,000 per month and finance up to 85 percent of the on-road price of the vehicle.
+
+Q: How do I dispute an unauthorised card transaction?
+   top-1 similarity = 0.6311  (threshold 0.3952)  -> ANSWER
+   sources: ['kb05_fraud_dispute']
+   A: A customer who notices an unauthorised transaction should report it to Cred support or block the card in the app immediately, because reporting within three working days limits the customer liability to zero.
+
+Q: What is the process to close my savings account?
+   top-1 similarity = 0.7980  (threshold 0.3952)  -> ANSWER
+   sources: ['kb06_account_closure', 'kb11_joint_account_rules']
+   A: To close a savings account the customer submits a closure request through the app or a branch after clearing all dues and linked loans. The remaining balance is paid to another account of the customer by transfer or demand draft within seven working days.
+
+Q: Is there a penalty for prepaying a fixed-rate loan?
+   top-1 similarity = 0.7571  (threshold 0.3952)  -> ANSWER
+   sources: ['kb08_prepayment_penalty', 'kb13_application_statuses']
+   A: Fixed-rate loans attract a penalty of 2 percent of the principal outstanding at the time of the prepayment. Cred does not charge any prepayment or foreclosure penalty on floating-rate loans taken by individual borrowers.
+
+Q: Can a non-resident Indian open an NRE account?
+   top-1 similarity = 0.7331  (threshold 0.3952)  -> ANSWER
+   sources: ['kb09_minimum_balance', 'kb12_nri_account_eligibility']
+   A: Non-Resident Indians and Persons of Indian Origin can open NRE, NRO and FCNR(B) accounts with Cred. An NRE account holds money remitted from abroad in foreign currency, which is converted to rupees, and its balance and interest are fully repatriable.
+
+Q: What KYC documents do I need to submit?
+   top-1 similarity = 0.7128  (threshold 0.3952)  -> ANSWER
+   sources: ['kb04_kyc_documents', 'kb11_joint_account_rules']
+   A: Salaried applicants also submit the last three salary slips and six months of bank statements, while business applicants add GST registration and income-tax returns. Identity can be proved with a PAN card together with an officially valid document such as Aadhaar, passport, voter ID or driving licence.
+
+Q: Who won the cricket world cup final?
+   top-1 similarity = 0.1447  (threshold 0.3952)  -> FALLBACK
+   sources: ['kb04_kyc_documents', 'kb11_joint_account_rules']
+   A: I don't know based on the information available to me. I couldn't find this in our knowledge base, so please contact Cred support.
+

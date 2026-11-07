@@ -1,0 +1,19 @@
+﻿(a)+(b) RUN 1: graph stops BEFORE 'generate_answer' (simulated interruption)
+python.exe : 
+At F:\IIT_CAPSTONE\run_all_demos.ps1:14 char:3
++   & $py $j[0] 2>&1 | Where-Object { $_ -notmatch "Loading weights|HF_ ...
++   ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   nodes completed so far : ['guard_input', 'classify_intent', 'rag_retrieve']
+   next node(s) pending   : ['generate_answer']
+   execution counters     : {'guard_input': 1, 'classify_intent': 1, 'rag_retrieve': 1}
+
+(c) RUN 2: NEW agent object + NEW sqlite connection, resume SAME thread id
+   state loaded from checkpoint -> nodes: ['guard_input', 'classify_intent', 'rag_retrieve'] | retrieved chunks: 3
+   final nodes_executed   : ['guard_input', 'classify_intent', 'rag_retrieve', 'generate_answer', 'groundedness_check', 'finalize']
+   executions during resume: {'generate_answer': 1, 'groundedness_check': 1, 'finalize': 1}
+   answer: Fixed-rate loans attract a penalty of 2 percent of the principal outstanding at the time of the prepayment. Cred does not charge any prepayment or foreclosure penalty on floating-rate loans taken by individual borrowers.
+
+PASS: guard_input, classify_intent, rag_retrieve ran once before the stop ({'guard_input': 1, 'classify_intent': 1, 'rag_retrieve': 1}); on resume they were loaded from the checkpoint and NOT re-executed.
